@@ -1,4 +1,10 @@
-# binary's optional extension added
-# for wildcards
-build: hello-world.C
-	g++ -c hello-world.C && g++ -o hello-world.exe hello-world.o
+CC = g++
+CFLAGS = -c -Wall
+
+all: hello
+
+hello: hello-world.o
+	$(CC) hello-world.o -o hello-world.exe
+
+hello-world.o: hello-world.cpp
+	$(CC) $(CFLAGS) hello-world.cpp
