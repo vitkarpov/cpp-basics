@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 int lengthString( const char *st )
 {
     int cnt = 0;
@@ -18,6 +20,6 @@ const char *st = "Количество символов в этой строке
 
 int main()
 {
-    std::cout << st << ": " << lengthString(st) << "\n";
+    cout << st << ": " << lengthString(st) << "\n";
     return 0;
 }
